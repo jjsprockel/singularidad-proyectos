@@ -1,0 +1,14 @@
+# Archivos fuente originales (ya copiados a assets/) y material de referencia
+# que no forma parte del sitio publicado. Se conservan en el disco local pero
+# no se versionan para no duplicar binarios grandes ni archivos con espacios
+# en el nombre dentro del repositorio.
+/Logo Singularidad.png
+/Logo Universidad FUCS.png
+/Presentacion_proyectos_Semillero_Singularidad.pdf
+/Proyecto_1_Pagina_personal_academica_Singularidad  -  Reparado.pdf
+/Proyecto_2_Pagina_institucional_Singularidad.pdf
+/Proyecto_3_Blog_IA_salud_Singularidad.pdf
+/Proyecto_5_Promocion_posicionamiento_Singularidad.pdf
+
+# Sistema
+.DS_Store

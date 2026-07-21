@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Proyectos formativos del Semillero Singularidad — Inteligencia artificial aplicada a la salud, la investigación y la educación. FUCS.">
+  <title>Proyectos formativos del Semillero Singularidad</title>
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Proyectos formativos del Semillero Singularidad">
+  <meta property="og:description" content="Cinco proyectos formativos de inteligencia artificial aplicada a la salud, la investigación y la educación. Semillero Singularidad · FUCS.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/logos/singularidad.png">
+
+  <!-- Favicon: recorte del logo de Singularidad -->
+  <link rel="icon" href="assets/logos/singularidad.png" type="image/png">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!-- Overlay del menú móvil -->
+<div id="sidebar-overlay" aria-hidden="true"></div>
+
+<div id="app">
+
+  <!-- ══════════ MENÚ LATERAL ══════════ -->
+  <aside id="sidebar" aria-label="Menú principal del sitio">
+    <div class="sidebar-header">
+      <div class="logo-group">
+        <img src="assets/logos/singularidad.png" alt="Logo del Semillero de Investigación Singularidad" width="150">
+        <hr class="logo-divider">
+        <div class="logo-plate">
+          <img src="assets/logos/fucs.png" alt="Logo de la Fundación Universitaria de Ciencias de la Salud, FUCS" width="130">
+        </div>
+      </div>
+    </div>
+    <div class="sidebar-title">Proyectos formativos</div>
+    <ul id="nav-menu" role="navigation" aria-label="Secciones del sitio"></ul>
+    <div class="sidebar-footer">
+      Semillero de Investigación Singularidad<br>
+      Fundación Universitaria de Ciencias de la Salud
+    </div>
+  </aside>
+
+  <!-- ══════════ CONTENIDO PRINCIPAL ══════════ -->
+  <div id="content">
+
+    <!-- Topbar móvil -->
+    <div id="topbar" role="banner">
+      <button id="hamburger" aria-label="Abrir menú" aria-expanded="false" aria-controls="sidebar">
+        <span></span><span></span><span></span>
+      </button>
+      <span class="topbar-title">Inicio</span>
+    </div>
+
+    <!-- Navegación de pestañas superiores -->
+    <div id="tab-nav-wrapper" role="navigation" aria-label="Pestañas de la sección"></div>
+
+    <!-- Paneles de contenido -->
+    <main id="tab-panels" role="main"></main>
+
+    <!-- Pie de página -->
+    <footer>
+      <strong>Semillero de Investigación Singularidad</strong> — Fundación Universitaria de Ciencias de la Salud (FUCS)
+    </footer>
+
+  </div><!-- /content -->
+</div><!-- /app -->
+
+<!-- Botón volver arriba -->
+<button id="btn-top" aria-label="Volver arriba" title="Volver arriba">↑</button>
+
+<!-- ══════════ Scripts (orden relevante: datos → app → render/navegación → interacción) ══════════ -->
+<script src="js/data/site-data.js"></script>
+<script src="js/data/team-data.js"></script>
+<script src="js/data/project-1.js"></script>
+<script src="js/data/project-2.js"></script>
+<script src="js/data/project-3.js"></script>
+<script src="js/data/project-4.js"></script>
+<script src="js/data/project-5.js"></script>
+<script src="js/app.js"></script>
+<script src="js/render.js"></script>
+<script src="js/clipboard.js"></script>
+<script src="js/checklists.js"></script>
+<script src="js/navigation.js"></script>
+
+</body>
+</html>
