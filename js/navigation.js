@@ -5,12 +5,6 @@
    No contiene contenido editable.
    ───────────────────────────────────────────────────────── */
 
-const SECCIONES_MENU = [
-  { id: 'inicio', label: 'Inicio' },
-  { id: 'proyectos', label: 'Proyectos' },
-  { id: 'nosotros', label: 'Nosotros' }
-];
-
 document.addEventListener('DOMContentLoaded', () => {
   buildSidebar();
   initMobileMenu();
@@ -22,20 +16,37 @@ document.addEventListener('DOMContentLoaded', () => {
 /* ─── Menú lateral ─── */
 function buildSidebar() {
   const nav = document.getElementById('nav-menu');
-  SECCIONES_MENU.forEach(item => {
+
+  function addLink(href, label, section, projectId) {
     const li = document.createElement('li');
     const a = document.createElement('a');
-    a.href = '#/' + item.id;
-    a.dataset.section = item.id;
-    a.textContent = item.label;
+    a.href = href;
+    a.dataset.section = section;
+    if (projectId) {
+      a.dataset.project = projectId;
+      li.className = 'nav-sub';
+    }
+    a.textContent = label;
     li.appendChild(a);
     nav.appendChild(li);
+    return li;
+  }
+
+  addLink('#/inicio', 'Inicio', 'inicio');
+  addLink('#/proyectos', 'Proyectos', 'proyectos');
+  PROYECTOS.forEach(p => {
+    addLink(`#/proyectos/${p.id}`, `${p.numero}. ${p.nombre}`, 'proyectos', p.id);
   });
+  addLink('#/nosotros', 'Nosotros', 'nosotros');
 }
 
-function updateSidebarActive(section) {
+function updateSidebarActive(section, projectId) {
   document.querySelectorAll('#nav-menu a').forEach(a => {
-    a.classList.toggle('active', a.dataset.section === section);
+    if (a.dataset.project) {
+      a.classList.toggle('active', a.dataset.project === projectId);
+    } else {
+      a.classList.toggle('active', a.dataset.section === section);
+    }
   });
 }
 
@@ -45,7 +56,7 @@ function route() {
   const parts = hash.split('/').filter(Boolean);
   const section = parts[0] || 'inicio';
 
-  updateSidebarActive(section);
+  updateSidebarActive(section, section === 'proyectos' ? parts[1] : null);
   closeMobileMenu();
 
   if (section === 'proyectos' && parts[1]) {

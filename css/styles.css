@@ -187,6 +187,21 @@ a[target="_blank"]::after {
   outline-offset: -2px;
 }
 
+/* Enlaces directos a cada uno de los cinco proyectos, indentados bajo "Proyectos" */
+#nav-menu li.nav-sub a {
+  padding: 8px 20px 8px 34px;
+  font-size: .8rem;
+  color: rgba(244,241,234,.6);
+  font-weight: 400;
+}
+
+#nav-menu li.nav-sub a:hover { color: var(--texto); }
+
+#nav-menu li.nav-sub a.active {
+  color: var(--naranja-2);
+  font-weight: 600;
+}
+
 .sidebar-footer {
   margin-top: auto;
   padding: 16px 20px 22px;
