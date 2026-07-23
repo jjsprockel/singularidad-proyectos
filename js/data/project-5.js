@@ -10,6 +10,7 @@ const PROYECTO_5 = {
   resumenBreve: 'Diseño de un plan de comunicación y posicionamiento para aumentar la visibilidad y el uso del sitio y el blog del semillero.',
   duracionEstimada: 'Seis semanas · seis actividades',
   productoFinal: 'Plan de comunicación y posicionamiento publicado como sección del sitio',
+  presentacionPdf: 'assets/presentaciones/proyecto-5.pdf',
 
   presentacion: {
     proposito: 'Diseñar un plan de comunicación y posicionamiento que aumente la visibilidad, consulta y utilización de la página institucional y el blog construidos en los proyectos anteriores.',

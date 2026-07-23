@@ -10,6 +10,7 @@ const PROYECTO_4 = {
   resumenBreve: 'Construcción de un sistema reproducible para proponer, seleccionar, revisar, aprobar y publicar contenidos del semillero.',
   duracionEstimada: 'Seis semanas · seis actividades',
   productoFinal: 'Programa editorial publicado como sección del sitio, con su flujo, roles y criterios documentados',
+  presentacionPdf: 'assets/presentaciones/proyecto-4.pdf',
 
   presentacion: {
     proposito: 'Construir un programa editorial reproducible que ordene cómo se proponen, seleccionan, revisan, aprueban, publican y actualizan los contenidos del semillero, incluyendo los del blog desarrollado en el Proyecto 3.',

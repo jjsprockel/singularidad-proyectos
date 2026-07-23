@@ -10,6 +10,7 @@ const PROYECTO_2 = {
   resumenBreve: 'Construcción de la página institucional que presenta al semillero, sus integrantes, proyectos y actividades.',
   duracionEstimada: 'Seis semanas · seis actividades',
   productoFinal: 'Sitio institucional del Semillero Singularidad publicado en GitHub Pages',
+  presentacionPdf: 'assets/presentaciones/proyecto-2.pdf',
 
   presentacion: {
     proposito: 'Construir la página institucional del Semillero de Investigación Singularidad, que presente de forma clara y actualizable qué es el semillero, sus objetivos, integrantes, proyectos y forma de vinculación.',

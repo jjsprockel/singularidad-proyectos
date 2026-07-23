@@ -20,6 +20,7 @@ const PROYECTO_1 = {
   resumenBreve: 'Diseño y publicación de una página personal académica para estudiantes o profesionales de ciencias de la salud.',
   duracionEstimada: 'Seis semanas · seis actividades',
   productoFinal: 'Página personal académica publicada en GitHub Pages',
+  presentacionPdf: 'assets/presentaciones/proyecto-1.pdf',
 
   presentacion: {
     proposito: 'Diseñar y publicar una página personal académica para estudiantes o profesionales de ciencias de la salud, que presente de forma clara y ética su formación, intereses académicos, proyectos y producción.',

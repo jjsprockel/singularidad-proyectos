@@ -59,6 +59,20 @@ function checklistBlock(key, items) {
   </div>`;
 }
 
+/** Visor embebido de una presentación en PDF, con descarga y apertura en pestaña nueva */
+function bloquePdf(url, titulo) {
+  if (!url) return '';
+  return `<div class="pdf-viewer-wrap">
+    <div class="pdf-toolbar">
+      <span class="pdf-title">${titulo}</span>
+      <a href="${url}" download class="btn-pdf-download"><span aria-hidden="true">⬇</span> Descargar PDF</a>
+      <a href="${url}" target="_blank" rel="noopener" class="btn-pdf-open">Abrir en nueva pestaña</a>
+    </div>
+    <iframe src="${url}" class="pdf-frame" title="Presentación: ${titulo}" loading="lazy"></iframe>
+    <p class="pdf-fallback">Si el visor no carga, <a href="${url}" target="_blank" rel="noopener">haz clic aquí para abrir el PDF</a>.</p>
+  </div>`;
+}
+
 function enlaceRecurso(recurso) {
   const titulo = recurso.url
     ? `<a href="${recurso.url}" target="_blank" rel="noopener">${recurso.titulo}</a>`
@@ -142,6 +156,11 @@ function renderInicioView() {
       <div class="duracion-strip">${duracionItems}</div>
     </div>`;
 
+  const presentacionPdf = si(s.presentacionPdf, `
+    <h2 class="section-title">Presentación del programa</h2>
+    ${bloquePdf(s.presentacionPdf, 'Portafolio de proyectos formativos — Semillero Singularidad')}
+  `);
+
   const presentacionSemillero = `
     <h2 class="section-title">El Semillero de Investigación Singularidad</h2>
     ${tarjeta('Presentación institucional', `
@@ -192,7 +211,7 @@ function renderInicioView() {
     <div class="proyectos-grid">${proyectosCards}</div>
   `;
 
-  setPanel(hero + presentacionSemillero + metodologia + herramientas + proyectos);
+  setPanel(hero + presentacionPdf + presentacionSemillero + metodologia + herramientas + proyectos);
 }
 
 /* ═══════════════ Vista: PROYECTOS (resumen) ═══════════════ */
@@ -278,6 +297,10 @@ function renderTabPresentacion(proyecto) {
     ${tarjeta('Propósito del proyecto', `<p>${proyecto.presentacion.proposito}</p>`)}
     ${tarjeta('Contexto', `<p>${proyecto.presentacion.contexto}</p>`)}
     ${si(proyecto.presentacion.alcance, tarjeta('Alcance', `<p>${proyecto.presentacion.alcance}</p>`))}
+    ${si(proyecto.presentacionPdf, `
+      <h3 class="subsection-title">Presentación en diapositivas</h3>
+      ${bloquePdf(proyecto.presentacionPdf, proyecto.nombre)}
+    `)}
   `;
 }
 

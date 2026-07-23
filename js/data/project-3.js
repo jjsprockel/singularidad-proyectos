@@ -10,6 +10,7 @@ const PROYECTO_3 = {
   resumenBreve: 'Diseño y construcción de un blog institucional de divulgación, educación e investigación en IA y salud.',
   duracionEstimada: 'Seis semanas · seis actividades',
   productoFinal: 'Blog integrado o enlazado a la página del semillero, con su primera plantilla de artículo definida',
+  presentacionPdf: 'assets/presentaciones/proyecto-3.pdf',
 
   presentacion: {
     proposito: 'Diseñar y construir un blog institucional orientado a la divulgación, la educación y la investigación en inteligencia artificial aplicada a la salud, integrado o enlazado a la página del semillero.',

@@ -16,6 +16,10 @@ const SITE_CONFIG = {
   subtitulo: 'Inteligencia artificial aplicada a la salud, la investigación y la educación',
   descripcion: 'El programa de proyectos formativos del Semillero Singularidad busca desarrollar competencias para investigar, diseñar, construir, evaluar y divulgar soluciones digitales relacionadas con la inteligencia artificial aplicada a la salud, la educación y la investigación.',
 
+  /* Presentación general del programa (portafolio de los cinco proyectos).
+     Si se deja vacío (''), el botón/visor se oculta automáticamente. */
+  presentacionPdf: 'assets/presentaciones/presentacion-general.pdf',
+
   duracion: {
     items: [
       'Cinco proyectos formativos.',
